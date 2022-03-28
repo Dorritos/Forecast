@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Forecast</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Today</string>
+    <string name="menu_gallery">Tomorrow</string>
+    <string name="menu_slideshow">10 Days</string>
+
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="temp">Temperature</string>
+    <string name="temp_min">Min:</string>
+    <string name="temp_max">Max:</string>
+    <string name="feels_Like">Feels Like:</string>
+    <string name="description">Description</string>
+
+    <!--Weather id descriptions-->
+    <string name="id200">Thunderstorm with light rain</string>
+    <string name="id201">Thunderstorm with rain</string>
+    <string name="id202">Thunderstorm with heavy rain</string>
+    <string name="id210">Light thunderstorm</string>
+    <string name="id211">Thunderstorm</string>
+    <string name="id212">Heavy thunderstorm</string>
+    <string name="id221">Ragged thunderstorm</string>
+    <string name="id230">Thunderstorm with light drizzle</string>
+    <string name="id231">Thunderstorm with drizzle</string>
+    <string name="id232">Thunderstorm with heavy drizzle</string>
+    <string name="id300">Light intensity drizzle</string>
+    <string name="id301">Drizzle</string>
+    <string name="id302">Heavy intensity drizzle</string>
+    <string name="id310">Light intensity drizzle rain</string>
+    <string name="id311">Drizzle rain</string>
+    <string name="id312">Heavy intensity drizzle rain</string>
+    <string name="id313">Shower rain and drizzle</string>
+    <string name="id314">Heavy shower rain and drizzle</string>
+    <string name="id321">Shower drizzle</string>
+    <string name="id500">Light rain</string>
+    <string name="id501">Moderate rain</string>
+    <string name="id502">Heavy intensity rain</string>
+    <string name="id503">Very heavy rain</string>
+    <string name="id504">Extreme rain</string>
+    <string name="id511">Freezing rain</string>
+    <string name="id520">Light intensity shower rain</string>
+    <string name="id521">Shower rain</string>
+    <string name="id522">Heavy intensity shower rain</string>
+    <string name="id531">Ragged shower rain</string>
+    <string name="id600">Light snow</string>
+    <string name="id601">Some shit</string>
+    <string name="id602">Heavy snow</string>
+    <string name="id611">Sleet</string>
+    <string name="id612">Light shower sleet</string>
+    <string name="id613">Shower sleet</string>
+    <string name="id615">Light rain and snow</string>
+    <string name="id616">Rain and snow</string>
+    <string name="id620">Light shower snow</string>
+    <string name="id621">Shower snow	</string>
+    <string name="id622">Heavy shower snow</string>
+    <string name="id701">Mist</string>
+    <string name="id711">Smoke</string>
+    <string name="id721">Haze</string>
+    <string name="id731">Sand/ dust whirls</string>
+    <string name="id741">Fog</string>
+    <string name="id751">Sand</string>
+    <string name="id761">Dust</string>
+    <string name="id762">Volcanic ash</string>
+    <string name="id771">Squalls</string>
+    <string name="id781">Tornado</string>
+    <string name="id800">Clear sky</string>
+    <string name="id801">Few clouds: 1–25%</string>
+    <string name="id802">Scattered clouds: 25–50%</string>
+    <string name="id803">Broken clouds: 50–84%</string>
+    <string name="id804">Overcast clouds: 85–100%</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+</resources>

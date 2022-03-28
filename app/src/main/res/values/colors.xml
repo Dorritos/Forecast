@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="system_color">#15578B</color>
+    <color name="today_color">#D20D7DAF</color>
+    <color name="tomorrow_color">#00BCD4</color>
+    <color name="ten_days_color">#F03700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="temp_0">#868581</color>
+    <color name="temp_5">#ac833f</color>
+    <color name="temp_10">#0b20ea</color>
+    <color name="temp_15">#55aef3</color>
+    <color name="temp_20">#32ecff</color>
+    <color name="temp_25">#0380fe</color>
+    <color name="temp_30">#fe1000</color>
+    <color name="temp_35">#fefa97</color>
+    <color name="temp_40">#fffefa</color>
+    <color name="temp_minus_5">#979390</color>
+    <color name="temp_minus_10">#635d64</color>
+    <color name="temp_minus_15">#312c30</color>
+    <color name="temp_minus_20">#2d282a</color>
+    <color name="temp_minus_25">#000000</color>
+    <color name="temp_minus_30">#000000</color>
+    <color name="temp_minus_35">#000000</color>
+</resources>
