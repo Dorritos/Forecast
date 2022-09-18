@@ -1,6 +1,8 @@
 package com.dorritos.forecast.ui.fragments
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
@@ -10,9 +12,12 @@ import androidx.lifecycle.lifecycleScope
 import com.dorritos.forecast.R
 import com.dorritos.forecast.databinding.FragmentTodayBinding
 import com.dorritos.forecast.remote.models.current.CurrentWeather
+import com.dorritos.forecast.service.WeatherService
+import com.dorritos.forecast.ui.utils.ThemePicker
 import com.dorritos.forecast.ui.viewmodels.CurrentWeatherViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
+import org.koin.androidx.viewmodel.ext.android.stateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CurrentWeatherFragment : BaseFragment() {
@@ -38,8 +43,8 @@ class CurrentWeatherFragment : BaseFragment() {
         search?.let {
             it.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
-                    // эту строку р0 проводишь во вью модель с целью оределить лат лонг по введённому городу
-                    currentWeatherViewModel.currentWeatherFlow.value.toString()
+                    currentWeatherViewModel.getWeatherByCity(p0)
+                    prefs.editor().putString(key, value).apply()
                     return true
                 }
 
@@ -53,6 +58,12 @@ class CurrentWeatherFragment : BaseFragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.exit_button -> {
+                //Добавить категорию к с интенту для старта сервиса
+                val intent = Intent().also {
+                    it.putExtra(WeatherService.commandKey, WeatherService.exitCommand)
+                    it.addCategory(Intent.ACTION_MAIN)
+                }
+                ContextCompat.startForegroundService(requireContext(), intent)
                 requireActivity().finish()
             }
         }
@@ -62,7 +73,7 @@ class CurrentWeatherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         subscribe()
-        currentWeatherViewModel.getCurrentWeather(getLanguage())
+        currentWeatherViewModel.getWeatherByCity(prefs.getString(key, null))
     }
 
     private fun subscribe() {
@@ -70,7 +81,7 @@ class CurrentWeatherFragment : BaseFragment() {
             currentWeatherViewModel.currentWeatherFlow.onEach {
                 it?.let {
                     initTempViews(it)
-                    applyWeatherCharacter(it)
+                    ThemePicker.applyWeatherCharacter(it, requireContext(), binding)
                     applyWeatherDescription(it)
                 }
             }.collect()
@@ -93,159 +104,7 @@ class CurrentWeatherFragment : BaseFragment() {
         }
     }
 
-    @SuppressLint("ResourceAsColor")
-    private fun applyWeatherCharacter(currentWeather: CurrentWeather) {
-        val temp = currentWeather.main.temp.toInt()
-        val characterImage = binding.imageViewWeatherIcon
-        val detailsBackground = binding.constraintLayout2
-        when (temp) {
-            in 35..40 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_40
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_40)
-            }
-            in 30..35 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_35
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_35)
-            }
-            in 25..30 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_30
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_30)
-            }
-            in 20..25 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_25
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_25)
-            }
-            in 15..20 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_20
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_20)
-            }
-            in 10..15 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_15
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_15)
-            }
-            in 5..10 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_10
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_10)
-            }
-            in 0..5 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_5
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_5)
-            }
-            in -5..0 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_0
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_0)
-            }
-            in -1 downTo -5 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_5
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_5)
-            }
-            in -5 downTo -10 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_10
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_10)
-            }
-            in -10 downTo -15 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_15
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_15)
-            }
-            in -15 downTo -20 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_20
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_20)
-            }
-            in -20 downTo -25 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_25
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_25)
-            }
-            in -25 downTo -30 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_30
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_30)
-            }
-            in -30 downTo -35 -> {
-                detailsBackground.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.temp_minus_35
-                    )
-                )
-                characterImage.setImageResource(R.drawable.ic_temp_minus_35)
-            }
-            else -> characterImage.setImageResource(R.drawable.ic_temp_0)
-        }
-    }
+
 
     private fun applyWeatherDescription(currentWeather: CurrentWeather) {
         val textViewDescription = binding.textViewDescription

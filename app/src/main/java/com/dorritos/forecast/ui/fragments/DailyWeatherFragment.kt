@@ -17,7 +17,7 @@ class DailyWeatherFragment : BaseFragment() {
 
     private var _binding: FragmentDailyBinding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter: DailyWeatherAdapter
+    private val adapter: DailyWeatherAdapter by lazy { DailyWeatherAdapter(lifecycleScope) }
     private val dailyWeatherViewModel: DailyWeatherViewModel by viewModel()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -27,7 +27,6 @@ class DailyWeatherFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = DailyWeatherAdapter(lifecycleScope)
         val recycler = binding.recyclerViewDailyForecast
         recycler.layoutManager = LinearLayoutManager(requireContext())
         recycler.adapter = adapter

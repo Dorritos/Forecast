@@ -5,7 +5,7 @@ import com.dorritos.forecast.LatLon
 import com.dorritos.forecast.remote.models.current.CurrentWeather
 import com.dorritos.forecast.remote.models.current.DailyWeather
 
-interface WeatherRepository {
+interface WeatherService {
      suspend fun getCurrentWeather(lang: String, latLon: LatLon): CurrentWeather
      suspend fun getDailyWeather(lang: String, latLon: LatLon): DailyWeather
 }

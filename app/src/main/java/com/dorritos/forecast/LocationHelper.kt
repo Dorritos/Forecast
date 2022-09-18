@@ -6,11 +6,11 @@ import android.content.pm.PackageManager
 import android.location.LocationManager
 import androidx.core.app.ActivityCompat
 
-class LocationHelper(context: Context) {
+class LocationHelper(private val context: Context) {
 
     private val service = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-    fun getLocation(location: String) {
+    fun getLocation(location: String): LatLon {
         if (ActivityCompat.checkSelfPermission(
                 context,
                 Manifest.permission.ACCESS_FINE_LOCATION
