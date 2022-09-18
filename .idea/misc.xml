@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/ic_sunny.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/side_nav_bar.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background.xml" value="0.2895" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_0.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_10.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_15.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_35.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_40.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_5.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_10.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_15.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_20.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_25.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_30.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_35.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/today_background_temp_minus_5.xml" value="0.2575" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/drawable/tomorrow_background.xml" value="0.189" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/activity_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/activity_switcher.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/activity_tabbed.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/app_bar_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/content_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/daily_weather_item.xml" value="0.33" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_gallery.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_main.xml" value="0.3484375" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_slideshow.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_switcher.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_tabbed.xml" value="0.3484375" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_tendays.xml" value="0.11927083333333334" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_today.xml" value="0.25" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/fragment_tomorrow.xml" value="0.33" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/layout/nav_header_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Adnroid projects/app/src/main/res/menu/menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/ic_sunny.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/drawable/side_nav_bar.xml" value="0.2335" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/activity_layout_new.xml" value="0.25" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/activity_menu.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/app_bar_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/content_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/daily_weather_item.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/fragment_daily.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/fragment_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/fragment_today.xml" value="0.3625" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/fragment_tomorrow.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/layout/nav_header_menu.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/menu/menu.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Aidar/Desktop/Forecast-master/app/src/main/res/menu/weather_menu.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/layout/activity_layout_new.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/layout/activity_menu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/layout/app_bar_menu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/layout/fragment_today.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pavel/Desktop/Forecast-master/app/src/main/res/menu/weather_menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

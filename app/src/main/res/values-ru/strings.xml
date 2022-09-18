@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Сегодня</string>
+    <string name="menu_gallery">Завтра</string>
+    <string name="menu_slideshow">10 Дней</string>
+
+    <string name="country">Регион</string>
+    <string name="city">Город</string>
+    <string name="temp">Температура</string>
+    <string name="temp_min">Мин:</string>
+    <string name="temp_max">Макс:</string>
+    <string name="feels_Like">Ощущается как:</string>
+    <string name="description">Описание</string>
+
+    <string name="id200">Гроза с небольшим дождем</string>
+    <string name="id201">Гроза с дождем</string>
+    <string name="id202">Гроза с сильным дождем</string>
+    <string name="id210">Легкая гроза</string>
+    <string name="id211">Гроза</string>
+    <string name="id212">Сильная гроза</string>
+    <string name="id221">Бушующая гроза</string>
+    <string name="id230">Гроза с мелким моросящим дождем</string>
+    <string name="id231">Гроза с моросью</string>
+    <string name="id232">Гроза с сильным моросящим дождем</string>
+    <string name="id300">Слабая морось</string>
+    <string name="id301">Морось</string>
+    <string name="id302">Сильный морось</string>
+    <string name="id310">Слабый моросящий дождь</string>
+    <string name="id311">Моросящий дождь</string>
+    <string name="id312">Сильный моросящий дождь</string>
+    <string name="id313">Дождь с дождем и изморось</string>
+    <string name="id314">Сильный ливневый дождь и морось</string>
+    <string name="id321">Морось в душе</string>
+    <string name="id500">Слабый дождь</string>
+    <string name="id501">Умеренный дождь</string>
+    <string name="id502">Сильный дождь</string>
+    <string name="id503">Очень сильный дождь</string>
+    <string name="id504">Сильный дождь</string>
+    <string name="id511">Ледяной дождь</string>
+    <string name="id520">Слабый ливневый дождь</string>
+    <string name="id521">Дождь из душа</string>
+    <string name="id522">Сильный ливневый дождь</string>
+    <string name="id531">Неровный дождь</string>
+    <string name="id600">Слабый снег</string>
+    <string name="id601">Какое-то дерьмо</string>
+    <string name="id602">Сильный снегопад</string>
+    <string name="id611">Мокрый дождь</string>
+    <string name="id612">Слабый дождь со снегом</string>
+    <string name="id613">Мокрый дождь</string>
+    <string name="id615">Слабый дождь и снег</string>
+    <string name="id616">Дождь и снег</string>
+    <string name="id620">Слабый ливневый снег</string>
+    <string name="id621">Снежный дождь </string>
+    <string name="id622">Сильный ливневый снег</string>
+    <string name="id701">Туман</string>
+    <string name="id711">Дым</string>
+    <string name="id721">Дымка</string>
+    <string name="id731">Песчаные/пылевые вихри</string>
+    <string name="id741">Туман</string>
+    <string name="id751">Песок</string>
+    <string name="id761">Пыль</string>
+    <string name="id762">Вулканический пепел</string>
+    <string name="id771">Шквалы</string>
+    <string name="id781">Торнадо</string>
+    <string name="id800">Чистое небо</string>
+    <string name="id801">Немного облаков: 1–25%</string>
+    <string name="id802">Разбросанные облака: 25–50%</string>
+    <string name="id803">Разорванные облака: 50–84%</string>
+    <string name="id804">Пасмурная облачность: 85–100 %</string>
+
+</resources>

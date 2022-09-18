@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_today">
+
+    <fragment
+        android:id="@+id/nav_today"
+        android:name="com.dorritos.forecast.ui.fragments.CurrentWeatherFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_today" />
+
+    <fragment
+        android:id="@+id/nav_tomorrow"
+        android:name="com.dorritos.forecast.ui.fragments.TomorrowFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_tomorrow" />
+
+    <fragment
+        android:id="@+id/nav_daily"
+        android:name="com.dorritos.forecast.ui.fragments.DailyWeatherFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_daily" />
+</navigation>
