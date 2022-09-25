@@ -3,6 +3,7 @@ package com.dorritos.forecast.service
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import androidx.core.app.NotificationCompat
 
 class WeatherService : Service() {
 
@@ -10,8 +11,7 @@ class WeatherService : Service() {
         const val commandKey = "ck"
         const val firstCommand = "1st"
         const val exitCommand = "exit"
-        // перечисляешь комманды
-        // и ключ
+        const val channelId = "CHANNEL_ID"
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
@@ -20,23 +20,24 @@ class WeatherService : Service() {
         super.onCreate()
     }
 
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         intent?.let {
             when(it.getStringExtra(commandKey)){
-                firstCommand -> {}
-                exitCommand -> {stopSelf()}
+                firstCommand -> {
+
+                }
+                exitCommand -> {
+                    stopSelf()
+                }
             }
         }
         startFG()
         return START_STICKY
     }
 
-    private fun startFG(){
-        //ДЗ
-        startForeground()
+    private fun startFG() {
+        
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

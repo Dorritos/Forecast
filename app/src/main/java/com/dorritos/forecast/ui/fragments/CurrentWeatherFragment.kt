@@ -3,6 +3,7 @@ package com.dorritos.forecast.ui.fragments
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
@@ -17,6 +18,7 @@ import com.dorritos.forecast.ui.utils.ThemePicker
 import com.dorritos.forecast.ui.viewmodels.CurrentWeatherViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.stateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -26,6 +28,7 @@ class CurrentWeatherFragment : BaseFragment() {
     private var search: SearchView? = null
     private val binding get() = _binding!!
     private val currentWeatherViewModel: CurrentWeatherViewModel by viewModel()
+    private val prefs: SharedPreferences by inject()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         setHasOptionsMenu(true)
@@ -44,7 +47,7 @@ class CurrentWeatherFragment : BaseFragment() {
             it.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
                     currentWeatherViewModel.getWeatherByCity(p0)
-                    prefs.editor().putString(key, value).apply()
+                    prefs.edit().putString(p0, p0).apply()
                     return true
                 }
 
@@ -73,7 +76,7 @@ class CurrentWeatherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         subscribe()
-        currentWeatherViewModel.getWeatherByCity(prefs.getString(key, null))
+        //currentWeatherViewModel.getWeatherByCity(prefs.getString(key, null))
     }
 
     private fun subscribe() {

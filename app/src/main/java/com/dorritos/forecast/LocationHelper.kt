@@ -12,16 +12,15 @@ class LocationHelper(private val context: Context) {
 
     fun getLocation(location: String): LatLon {
         if (ActivityCompat.checkSelfPermission(
-                context,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                context, Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
+                context, Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                context, Manifest.permission.ACCESS_COARSE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED) {
             val a = service.getLastKnownLocation(LocationManager.GPS_PROVIDER)
             if (a?.latitude != null && a.longitude != null){
-                LatLon(a.latitude, a.longitude)
+               return LatLon(a.latitude, a.longitude)
             }
         }
+        return LatLon(00.00, 00.00)
     }
 }
