@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.os.ConfigurationCompat
 import androidx.lifecycle.lifecycleScope
 import com.dorritos.forecast.R
+import com.dorritos.forecast.Settings.Companion.systemKey
 import com.dorritos.forecast.databinding.FragmentTodayBinding
 import com.dorritos.forecast.remote.models.current.CurrentWeather
 import com.dorritos.forecast.service.WeatherService
@@ -60,23 +61,24 @@ class CurrentWeatherFragment : BaseFragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.exit_button -> {
-                //Добавить категорию к с интенту для старта сервиса
-                val intent = Intent().also {
-                    it.putExtra(WeatherService.commandKey, WeatherService.exitCommand)
-                    it.addCategory(Intent.ACTION_MAIN)
-                }
-                ContextCompat.startForegroundService(requireContext(), intent)
-                requireActivity().finish()
-            }
+            R.id.exit_button -> startExitService()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun startExitService() {
+        val intent = Intent().also {
+            it.putExtra(WeatherService.key, WeatherService.exitCommand)
+            it.addCategory(Intent.ACTION_MAIN)
+        }
+        ContextCompat.startForegroundService(requireContext(), intent)
+        requireActivity().finish()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         subscribe()
-        //currentWeatherViewModel.getWeatherByCity(prefs.getString(key, null))
+        currentWeatherViewModel.getWeatherByCity(prefs.getString(systemKey, null))
     }
 
     private fun subscribe() {
@@ -106,8 +108,6 @@ class CurrentWeatherFragment : BaseFragment() {
             textViewFeelsLikeValue.text = currentWeather.main.getCelcium(currentWeather.main.feels_like)
         }
     }
-
-
 
     private fun applyWeatherDescription(currentWeather: CurrentWeather) {
         val textViewDescription = binding.textViewDescription

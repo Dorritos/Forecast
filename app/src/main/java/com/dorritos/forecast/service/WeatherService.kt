@@ -4,12 +4,14 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
 
 class WeatherService : Service() {
 
     companion object{
-        const val commandKey = "ck"
-        const val firstCommand = "1st"
+        const val key = "key"
+        const val startCommand = "1st"
         const val exitCommand = "exit"
         const val channelId = "CHANNEL_ID"
     }
@@ -22,8 +24,8 @@ class WeatherService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         intent?.let {
-            when(it.getStringExtra(commandKey)){
-                firstCommand -> {
+            when(it.getStringExtra(key)){
+                startCommand -> {
 
                 }
                 exitCommand -> {

@@ -17,11 +17,9 @@ class Settings() : Fragment() {
         const val systemKey = "systemKey"
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +28,6 @@ class Settings() : Fragment() {
     ): View? {
         return super.onCreateView(inflater, container, savedInstanceState)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -41,7 +38,6 @@ class Settings() : Fragment() {
         // view
        val system = prefs.getInt(systemKey, 0)
     }
-
 
     private fun saveSystem(system : Int){
         prefs.edit().putInt(systemKey, system).apply()
