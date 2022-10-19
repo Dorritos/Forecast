@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import org.koin.android.ext.android.inject
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class Settings() : Fragment() {
+class Settings : Fragment() {
 
     private val prefs by inject<SharedPreferences>()
 
-    companion object{
+    companion object {
         const val systemKey = "systemKey"
     }
 
@@ -36,10 +35,10 @@ class Settings() : Fragment() {
 
     private fun getSystemPrefs() {
         // view
-       val system = prefs.getInt(systemKey, 0)
+        val system = prefs.getInt(systemKey, 0)
     }
 
-    private fun saveSystem(system : Int){
+    private fun saveSystem(system: Int) {
         prefs.edit().putInt(systemKey, system).apply()
     }
 }

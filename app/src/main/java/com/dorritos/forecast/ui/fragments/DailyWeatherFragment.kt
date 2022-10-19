@@ -20,7 +20,11 @@ class DailyWeatherFragment : BaseFragment() {
     private val adapter: DailyWeatherAdapter by lazy { DailyWeatherAdapter(lifecycleScope) }
     private val dailyWeatherViewModel: DailyWeatherViewModel by viewModel()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentDailyBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -32,7 +36,6 @@ class DailyWeatherFragment : BaseFragment() {
         recycler.adapter = adapter
         recycler.addItemDecoration(SimpleDecorator(requireContext()))
         dailyWeatherViewModel.getDailyWeather(getLanguage())
-        //applyData()
     }
 
     /*private fun applyData() {

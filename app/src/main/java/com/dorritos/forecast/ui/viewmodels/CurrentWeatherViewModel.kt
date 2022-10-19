@@ -9,7 +9,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
-class CurrentWeatherViewModel(private val locationHelper: LocationHelper, private val weatherService: WeatherService) : ViewModel() {
+class CurrentWeatherViewModel(
+    private val locationHelper: LocationHelper,
+    private val weatherService: WeatherService
+) : ViewModel() {
 
     val currentWeatherFlow = MutableStateFlow<CurrentWeather?>(null)
 

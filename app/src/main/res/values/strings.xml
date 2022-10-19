@@ -8,9 +8,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Today</string>
-    <string name="menu_gallery">Tomorrow</string>
-    <string name="menu_slideshow">10 Days</string>
+    <string name="menu_today">Today</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_daily">10 Days</string>
 
     <string name="country">Country</string>
     <string name="city">City</string>
@@ -79,5 +79,9 @@
     <string name="title_activity_tabbed">TabbedActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

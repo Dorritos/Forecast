@@ -6,7 +6,8 @@ import com.dorritos.forecast.remote.ApiService
 import com.dorritos.forecast.remote.models.current.CurrentWeather
 import com.dorritos.forecast.remote.models.current.DailyWeather
 
-class WeatherServiceImpl(private val api: ApiService) : WeatherService {
+class
+ WeatherServiceImpl(private val api: ApiService) : WeatherService {
 
     private companion object {
         private const val SYSTEM = "metric"

@@ -1,7 +1,5 @@
 package com.dorritos.forecast.ui.fragments
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -9,8 +7,10 @@ import android.view.*
 import android.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.os.ConfigurationCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.dorritos.forecast.R
+import com.dorritos.forecast.Settings
 import com.dorritos.forecast.Settings.Companion.systemKey
 import com.dorritos.forecast.databinding.FragmentTodayBinding
 import com.dorritos.forecast.remote.models.current.CurrentWeather
@@ -20,7 +20,6 @@ import com.dorritos.forecast.ui.viewmodels.CurrentWeatherViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import org.koin.android.ext.android.inject
-import org.koin.androidx.viewmodel.ext.android.stateViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CurrentWeatherFragment : BaseFragment() {
@@ -43,8 +42,8 @@ class CurrentWeatherFragment : BaseFragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        search = menu.getItem(R.id.search) as SearchView
         search?.let {
+            menu.getItem(R.id.search) as SearchView
             it.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
                     currentWeatherViewModel.getWeatherByCity(p0)
@@ -61,9 +60,14 @@ class CurrentWeatherFragment : BaseFragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            //R.id.action_settings -> openSettings(Settings)
             R.id.exit_button -> startExitService()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun openSettings(fragment: Fragment){
+        activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentToday, fragment)?.commit()
     }
 
     private fun startExitService() {

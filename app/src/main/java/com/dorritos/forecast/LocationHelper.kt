@@ -21,6 +21,6 @@ class LocationHelper(private val context: Context) {
                return LatLon(a.latitude, a.longitude)
             }
         }
-        return LatLon(00.00, 00.00)
+        return LatLon(54.00, 53.00)
     }
 }

@@ -2,6 +2,7 @@ package com.dorritos.forecast
 
 import android.content.Context
 import com.dorritos.forecast.remote.ApiService
+import com.dorritos.forecast.remote.interfaces.WeatherService
 import com.dorritos.forecast.remote.interfaces.WeatherServiceImpl
 import com.dorritos.forecast.ui.viewmodels.CurrentWeatherViewModel
 import com.dorritos.forecast.ui.viewmodels.DailyWeatherViewModel
@@ -26,8 +27,8 @@ val appModule = module {
 
     single { get<Retrofit>().create(ApiService::class.java) }
 
-    viewModel { CurrentWeatherViewModel(get(), get())}
+    viewModel { CurrentWeatherViewModel(get(), get<WeatherServiceImpl>() as WeatherService ) }
 
-    viewModel { DailyWeatherViewModel(get(), get<WeatherServiceImpl>() as ) }
+    viewModel { DailyWeatherViewModel(get(), get<WeatherServiceImpl>() as WeatherService ) }
 
 }
